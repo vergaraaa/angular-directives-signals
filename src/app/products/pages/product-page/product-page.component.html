@@ -2,7 +2,7 @@
 <hr>
 
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-  <div class="row g-3 align-items-center mb-3">
+  <div class="row flex-row g-3 align-items-center mb-3">
     <div class="col-auto">
       <label>Name:</label>
     </div>
@@ -12,7 +12,7 @@
     </div>
 
     <div class="col-auto">
-      <p customLabel [color]="color">Temporary</p>
+      <p customLabel [color]="color" [errors]="myForm.get('name')?.errors">Temporary</p>
     </div>
   </div>
 
